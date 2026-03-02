@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tgfs-translation"
+version = "1.0.0"
+description = "Language Translations plugin for TG-FileStream"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.entry-points."tgfs.plugins"]
+translation = "tgfs_translation"
+
+[tool.setuptools]
+packages = ["tgfs_translation"]
+
+[tool.setuptools.package-dir]
+tgfs_translation = "."
