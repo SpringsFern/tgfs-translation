@@ -21,6 +21,46 @@ This repository provides:
 
 ---
 
+# Installation Methods
+
+You can install this plugin using **either** of the following methods.
+
+---
+
+## Method 1 — Local Patch (Development)
+
+Clone this repository inside the `patches` directory of TG-FileStream.
+
+Your folder structure should look like this:
+
+```
+<TG-FileStream base folder>/
+│
+├── .git
+├── tgfs/
+│   ├── patches/
+│   │   └── tgfs-translation   ← clone this repo here
+```
+Example:
+
+```sh
+cd <TG-FileStream base folder>/tgfs/patches
+git clone https://github.com/SpringsFern/tgfs-translation
+```
+
+---
+
+## Method 2 — Install as Plugin (Recommended)
+
+You can install this plugin directly via pip using the Git repository:
+```
+pip3 install git+https://github.com/SpringsFern/tgfs-translation
+```
+
+This method uses TGFS entry-point plugin loading and does not require placing files inside the patches directory.
+
+---
+
 # How Translation Works
 
 In the core project:
@@ -111,22 +151,6 @@ You must override at least:
 - Any user-visible message
 
 If a variable is not overridden, it will fallback to English.
-
----
-
-# Testing Your Translation Locally
-
-To test locally:
-
-1. Clone TG-FileStream.
-2. Clone this repository inside:
-
-```
-tgfs/patches/
-```
-
-3. Restart the bot.
-4. Set language code accordingly (if language selection is implemented).
 
 ---
 
